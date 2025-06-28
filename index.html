@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Unblocked Games Hub - Play Freely!</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #1a202c; /* Darker background for more depth */
+            color: #e2e8f0; /* Lighter text for better contrast */
+        }
+        .game-card {
+            background-color: #2d3748; /* Slightly lighter card background */
+            border-radius: 1rem; /* More pronounced rounded corners */
+            padding: 1.5rem; /* Increased padding */
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2); /* Stronger shadow for depth */
+            transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+        }
+        .game-card:hover {
+            transform: translateY(-5px); /* Lift effect on hover */
+            background-color: #4a5568; /* Darken on hover */
+        }
+        .game-title {
+            font-weight: 600; /* Slightly bolder game titles */
+            color: #90cdf4; /* Brighter blue for titles */
+        }
+        .game-status {
+            font-size: 0.875rem; /* Smaller status text */
+            font-weight: 600;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px; /* Pill shape */
+            margin-left: 0.75rem;
+            flex-shrink: 0; /* Prevent status from shrinking on mobile */
+        }
+        .status-working {
+            background-color: #38a169; /* Green for working */
+            color: #fff;
+        }
+        .status-unknown {
+            background-color: #ecc94b; /* Yellow for unknown */
+            color: #1a202c;
+        }
+        .animate-gradient {
+            background: linear-gradient(90deg, #63b3ed, #805ad5, #dd6b20);
+            background-size: 200% 200%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: gradient-flow 3s ease infinite;
+        }
+        @keyframes gradient-flow {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white flex flex-col min-h-screen">
+    <header class="py-6 px-4 bg-gray-800 shadow-md">
+        <div class="container mx-auto flex justify-center items-center">
+            <h1 class="text-5xl font-extrabold animate-gradient text-center md:text-left">
+                🎮 Unblocked Games Hub
+            </h1>
+        </div>
+    </header>
+
+    <main class="flex-grow flex flex-col items-center justify-center px-4 py-12">
+        <p class="text-xl text-gray-300 mb-10 text-center max-w-2xl">Your gateway to fun, <strong>unblocked games!</strong> Enjoy a seamless gaming experience, no matter where you are.</p>
+
+        <ul class="w-full max-w-lg space-y-6">
+            <li class="game-card flex flex-col sm:flex-row items-start sm:items-center justify-between">
+                <a href="https://ahw101.github.io/edwardsgame.github.io/" target="_blank" class="text-xl game-title hover:underline flex-grow mb-2 sm:mb-0">Guys, please use this one!</a>
+                <span class="game-status status-working">Online ✅</span>
+            </li>
+
+            <li class="game-card flex flex-col sm:flex-row items-start sm:items-center justify-between">
+                <a href="HOME.html" target="_blank" class="text-xl game-title hover:underline flex-grow mb-2 sm:mb-0">More</a>
+                <span class="game-status status-working">Online ✅</span>
+            </li>
+        </ul>
+    </main>
+
+    <footer class="mt-auto py-6 px-4 text-sm text-gray-500 text-center border-t border-gray-700">
+        <h2 class="text-lg font-bold text-gray-400 mb-2">Enjoy responsibly!</h2>
+        <p>While we provide these resources, we are not responsible for how you choose to use them. Play fair, and most importantly, have fun!</p>
+    </footer>
+</body>
+</html>
