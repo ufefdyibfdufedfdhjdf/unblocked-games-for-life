@@ -5,86 +5,159 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Unblocked Games Hub - Play Freely!</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: 'Inter', sans-serif;
-            background-color: #1a202c; /* Darker background for more depth */
-            color: #e2e8f0; /* Lighter text for better contrast */
+            font-family: 'Poppins', sans-serif;
+            background-color: #0f172a; /* Deeper dark blue for a premium feel */
+            color: #e2e8f0;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1200px; /* Wider container for better content spread */
+            margin: 0 auto;
+            padding: 0 1.5rem; /* Consistent padding */
+        }
+        .header {
+            background-color: #1e293b; /* Slightly lighter header for contrast */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 1.5rem 0;
+            border-bottom: 1px solid #334155; /* Subtle border */
+        }
+        .hero-section {
+            padding: 6rem 0; /* More vertical space for hero */
+            background: linear-gradient(to bottom right, #1f2937, #0f172a); /* Soft gradient */
+            text-align: center;
+        }
+        .game-list-section {
+            padding: 4rem 0;
         }
         .game-card {
-            background-color: #2d3748; /* Slightly lighter card background */
-            border-radius: 1rem; /* More pronounced rounded corners */
-            padding: 1.5rem; /* Increased padding */
-            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2); /* Stronger shadow for depth */
-            transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+            background-color: #27374a; /* Refined card background */
+            border-radius: 0.75rem; /* Slightly less aggressive rounding */
+            padding: 1.5rem;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25); /* More pronounced shadow */
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            border: 1px solid #334155; /* Subtle card border */
         }
         .game-card:hover {
-            transform: translateY(-5px); /* Lift effect on hover */
-            background-color: #4a5568; /* Darken on hover */
+            transform: translateY(-8px) scale(1.02); /* More prominent lift and slight scale */
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.35); /* Stronger shadow on hover */
+            background-color: #334155; /* Darken on hover */
         }
         .game-title {
-            font-weight: 600; /* Slightly bolder game titles */
-            color: #90cdf4; /* Brighter blue for titles */
+            font-weight: 700; /* Bolder titles */
+            color: #60a5fa; /* A vibrant blue */
+            font-size: 1.5rem; /* Larger title font */
         }
         .game-status {
-            font-size: 0.875rem; /* Smaller status text */
+            font-size: 0.8rem;
             font-weight: 600;
-            padding: 0.25rem 0.75rem;
-            border-radius: 9999px; /* Pill shape */
-            margin-left: 0.75rem;
-            flex-shrink: 0; /* Prevent status from shrinking on mobile */
+            padding: 0.35rem 1rem;
+            border-radius: 9999px;
+            margin-left: 1rem;
+            flex-shrink: 0;
+            text-transform: uppercase; /* Uppercase status */
+            letter-spacing: 0.05em; /* Slight letter spacing */
         }
         .status-working {
-            background-color: #38a169; /* Green for working */
+            background-color: #22c55e; /* Brighter green */
             color: #fff;
         }
         .status-unknown {
-            background-color: #ecc94b; /* Yellow for unknown */
+            background-color: #facc15; /* More vibrant yellow */
             color: #1a202c;
         }
-        .animate-gradient {
+        .animate-gradient-text {
             background: linear-gradient(90deg, #63b3ed, #805ad5, #dd6b20);
             background-size: 200% 200%;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            animation: gradient-flow 3s ease infinite;
+            animation: gradient-flow 4s ease infinite; /* Slower, smoother animation */
         }
         @keyframes gradient-flow {
             0% { background-position: 0% 50%; }
             50% { background-position: 100% 50%; }
             100% { background-position: 0% 50%; }
         }
+        .footer {
+            background-color: #1e293b;
+            border-top: 1px solid #334155;
+            padding: 2rem 0;
+        }
+        .footer p, .footer h2 {
+            color: #94a3b8; /* Softer text color for footer */
+        }
+        .button-primary {
+            display: inline-block;
+            background-color: #63b3ed;
+            color: #0f172a;
+            font-weight: 700;
+            padding: 0.75rem 2rem;
+            border-radius: 0.5rem;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            text-decoration: none;
+        }
+        .button-primary:hover {
+            background-color: #3b82f6;
+            transform: translateY(-2px);
+        }
     </style>
 </head>
-<body class="bg-gray-900 text-white flex flex-col min-h-screen">
-    <header class="py-6 px-4 bg-gray-800 shadow-md">
-        <div class="container mx-auto flex justify-center items-center">
-            <h1 class="text-5xl font-extrabold animate-gradient text-center md:text-left">
+<body class="bg-slate-900 text-white flex flex-col min-h-screen">
+    <header class="header">
+        <div class="container flex justify-between items-center">
+            <h1 class="text-4xl font-extrabold animate-gradient-text">
                 🎮 Unblocked Games Hub
             </h1>
-        </div>
+            </div>
     </header>
 
-    <main class="flex-grow flex flex-col items-center justify-center px-4 py-12">
-        <p class="text-xl text-gray-300 mb-10 text-center max-w-2xl">Your gateway to fun, <strong>unblocked games!</strong> Enjoy a seamless gaming experience, no matter where you are.</p>
+    <main class="flex-grow">
+        <section class="hero-section">
+            <div class="container">
+                <h2 class="text-5xl md:text-6xl font-extrabold text-white mb-6 leading-tight">
+                    Your Portal to <span class="animate-gradient-text">Uninterrupted Fun!</span>
+                </h2>
+                <p class="text-xl text-slate-300 max-w-3xl mx-auto mb-8">
+                    Discover a curated collection of **unblocked games**, ready for you to enjoy anytime, anywhere. No restrictions, just pure gaming bliss!
+                </p>
+                <a href="#games-list" class="button-primary">Explore Games Now</a>
+            </div>
+        </section>
 
-        <ul class="w-full max-w-lg space-y-6">
-            <li class="game-card flex flex-col sm:flex-row items-start sm:items-center justify-between">
-                <a href="https://ahw101.github.io/edwardsgame.github.io/" target="_blank" class="text-xl game-title hover:underline flex-grow mb-2 sm:mb-0">Guys, please use this one!</a>
-                <span class="game-status status-working">Online ✅</span>
-            </li>
+        <section id="games-list" class="game-list-section">
+            <div class="container">
+                <h3 class="text-3xl font-bold text-center text-white mb-10">Our Top Picks</h3>
+                <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <li class="game-card flex flex-col sm:flex-row items-start sm:items-center justify-between">
+                        <a href="https://ahw101.github.io/edwardsgame.github.io/" target="_blank" rel="noopener noreferrer" class="text-xl game-title hover:underline flex-grow mb-2 sm:mb-0">My Awesome Games Site</a>
+                        <span class="game-status status-working">Online ✅</span>
+                    </li>
 
-            <li class="game-card flex flex-col sm:flex-row items-start sm:items-center justify-between">
-                <a href="HOME.html" target="_blank" class="text-xl game-title hover:underline flex-grow mb-2 sm:mb-0">More</a>
-                <span class="game-status status-working">Online ✅</span>
-            </li>
-        </ul>
+                    <li class="game-card flex flex-col sm:flex-row items-start sm:items-center justify-between">
+                        <a href="HOME.html" target="_blank" rel="noopener noreferrer" class="text-xl game-title hover:underline flex-grow mb-2 sm:mb-0">More Games & Fun</a>
+                        <span class="game-status status-working">Online ✅</span>
+                    </li>
+                    <li class="game-card flex flex-col sm:flex-row items-start sm:items-center justify-between">
+                        <a href="#" class="text-xl game-title hover:underline flex-grow mb-2 sm:mb-0">Classic Arcade Collection</a>
+                        <span class="game-status status-unknown">Coming Soon ⏳</span>
+                    </li>
+                    <li class="game-card flex flex-col sm:flex-row items-start sm:items-center justify-between">
+                        <a href="#" class="text-xl game-title hover:underline flex-grow mb-2 sm:mb-0">Strategy Masterpieces</a>
+                        <span class="game-status status-unknown">Under Development 🛠️</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
     </main>
 
-    <footer class="mt-auto py-6 px-4 text-sm text-gray-500 text-center border-t border-gray-700">
-        <h2 class="text-lg font-bold text-gray-400 mb-2">Enjoy responsibly!</h2>
-        <p>While we provide these resources, we are not responsible for how you choose to use them. Play fair, and most importantly, have fun!</p>
+    <footer class="footer text-center">
+        <div class="container">
+            <h2 class="text-lg font-bold mb-2">Enjoy Responsibly!</h2>
+            <p>While we strive to provide accessible gaming, please remember to use these resources thoughtfully. We are not responsible for how you choose to engage with the content. Play fair, respect guidelines, and most importantly, have a fantastic time!</p>
+            <p class="mt-4 text-sm">&copy; 2025 Unblocked Games Hub. All rights reserved.</p>
+        </div>
     </footer>
 </body>
 </html>
